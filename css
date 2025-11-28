@@ -1,0 +1,320 @@
+/* --- GLOBAL STYLES & RESETS --- */
+:root {
+    --color-bg-dark: #1A1A1A;     /* Deep Charcoal Background */
+    --color-bg-medium: #2C2C2C;   /* Slightly Lighter Background for Cards */
+    --color-text-light: #F0F0F0;  /* Off-White Text */
+    --color-accent: #00BFFF;      /* Electric Blue Accent */
+    --color-accent-hover: #0099CC;
+    --color-shadow: rgba(0, 0, 0, 0.4);
+    --font-primary: 'Arial', sans-serif; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-accent-hover);
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- NAVIGATION --- */
+.main-nav {
+    background-color: var(--color-bg-dark);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-bg-medium);
+    max-width: 100%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.dot {
+    color: var(--color-accent);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: var(--color-text-light);
+}
+
+.cta-nav a {
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.cta-nav a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-bg-dark);
+}
+
+/* --- BUTTONS --- */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.primary-cta {
+    background-color: var(--color-text-light);
+    color: var(--color-bg-dark);
+}
+
+.primary-cta:hover {
+    background-color: #CCCCCC;
+}
+
+.secondary-cta {
+    border: 2px solid var(--color-accent);
+    background-color: transparent;
+    color: var(--color-accent);
+}
+
+.secondary-cta:hover {
+    background-color: var(--color-accent);
+    color: var(--color-bg-dark);
+}
+
+/* --- HERO SECTION --- */
+#hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 100px 5%;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    max-width: 800px;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+#hero .sub-headline {
+    font-size: 1.2rem;
+    color: #AAAAAA;
+    max-width: 650px;
+    margin-bottom: 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+/* --- SERVICES --- */
+#services {
+    text-align: center;
+}
+
+#services h2 {
+    margin-bottom: 10px;
+    color: var(--color-accent);
+}
+
+.section-description {
+    color: #AAAAAA;
+    margin-bottom: 40px;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--color-bg-medium);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 5px solid var(--color-accent);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--color-shadow);
+}
+
+.card h3 {
+    color: var(--color-text-light);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+.card-cta {
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    background-color: transparent;
+}
+
+.card-cta:hover {
+    background-color: var(--color-accent);
+    color: var(--color-bg-dark);
+}
+
+/* --- PROJECTS --- */
+#projects {
+    background-color: #111111; /* Slightly different background for visual break */
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project-card {
+    background-color: var(--color-bg-medium);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--color-accent);
+}
+
+.project-card h3 {
+    color: var(--color-accent);
+    margin-bottom: 5px;
+}
+
+.tech-stack {
+    font-size: 0.9rem;
+    color: #AAAAAA;
+    margin-top: 10px;
+}
+
+.project-links a {
+    margin-right: 15px;
+}
+
+/* --- ABOUT / SKILLS --- */
+#about {
+    padding-top: 80px;
+}
+
+.bio-summary {
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin-bottom: 40px;
+}
+
+.skills-matrix h3 {
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.skills-matrix table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.skills-matrix th, .skills-matrix td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--color-bg-medium);
+}
+
+.skills-matrix th {
+    background-color: var(--color-bg-medium);
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--color-bg-medium);
+    text-align: center;
+    padding: 30px 5%;
+    border-top: 1px solid #333333;
+}
+
+.footer-cta {
+    margin-top: 15px;
+    display: block;
+    max-width: 300px;
+    margin: 15px auto 0;
+}
+
+/* --- MEDIA QUERIES (Responsiveness) --- */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .cta-nav {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .cta-nav a {
+        display: block;
+        text-align: center;
+    }
+}
